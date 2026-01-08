@@ -75,5 +75,5 @@ output "null3" {
 }
 
 output "version" {
-  value = 5
+  value = 6
 }
