@@ -101,3 +101,7 @@ data "aws_ami" "ubuntu_2404" {
 output "ubuntu_2404_ami_name" {
   value = data.aws_ami.ubuntu_2404.name
 }
+
+provider "aws" {
+  region = "eu-west-1"
+}
