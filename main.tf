@@ -75,7 +75,7 @@ output "null3" {
 }
 
 output "version" {
-  value = 9
+  value = 10
 }
 
 resource "aws_security_group" "tfe_sg" {
