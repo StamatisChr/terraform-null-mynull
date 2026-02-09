@@ -78,29 +78,11 @@ output "version" {
   value = 9
 }
 
-data "aws_ami" "ubuntu_2404" {
-  owners      = ["099720109477"]
-  most_recent = true
-
-  filter {
-    name   = "name"
-    values = ["ubuntu/images/hvm-ssd-gp3/ubuntu-noble-24.04-amd64-server*"]
-  }
-
-  filter {
-    name   = "architecture"
-    values = ["x86_64"]
-  }
-
-  filter {
-    name   = "virtualization-type"
-    values = ["hvm"]
-  }
+resource "aws_security_group" "tfe_sg" {
+  name        = "tfe_sg-test"
+  description = "Allow inbound traffic and outbound traffic for TFE"
 }
 
-output "ubuntu_2404_ami_name" {
-  value = data.aws_ami.ubuntu_2404.name
-}
 
 provider "aws" {
   region = "eu-west-1"
