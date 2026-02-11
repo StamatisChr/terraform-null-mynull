@@ -6,12 +6,6 @@ terraform {
     null = {
       source  = "hashicorp/null"
     }
-    aws = {
-      source  = "hashicorp/aws"
-    }
-    azurerm = {
-      source = "hashicorp/azurerm"
-    }
   }
 }
 
@@ -76,14 +70,4 @@ output "null3" {
 
 output "version" {
   value = 10
-}
-
-resource "aws_security_group" "tfe_sg" {
-  name        = "tfe_sg-test"
-  description = "Allow inbound traffic and outbound traffic for TFE"
-}
-
-
-provider "aws" {
-  region = "eu-west-1"
 }
