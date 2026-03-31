@@ -15,7 +15,7 @@ terraform {
 
 
 variable "mycount" {
-  default = 3
+  default = 4
 }
 
 resource "random_pet" "pet1" {
