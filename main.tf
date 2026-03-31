@@ -20,7 +20,7 @@ variable "mycount" {
 
 resource "random_pet" "pet1" {
   prefix = timestamp()
-  length = 3
+  length = 4
 }
 
 resource "null_resource" "null1" {
